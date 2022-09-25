@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Flex } from '@chakra-ui/react'
+import { Box, Flex, Heading } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
@@ -29,6 +29,18 @@ const Home: NextPage = () => {
       </Head>
       <Flex h="100vh" w="100%" bg="zinc.900" alignItems="flex-start" flexDir="column">
         <Header />
+        <Box
+          borderBottom="1px solid"
+          borderColor="zinc.400"
+          maxW="1200px"
+          w="100%"
+          margin="0 auto"
+          py="4"
+          mb="4"
+          color="zinc.100"
+        >
+          <Heading>Anúncios</Heading>
+        </Box>
         <Flex maxW="1200px" w="100%" margin="0 auto" flexWrap="wrap" gap="4">
           {ads?.map((ad) => (
             <Card
